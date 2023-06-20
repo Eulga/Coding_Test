@@ -1,4 +1,4 @@
-package baekjoon.graph.s2.n1260;
+package baekjoon.graph.n1260;
 
 import java.io.BufferedReader;
 import java.io.IOException;
