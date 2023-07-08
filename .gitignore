@@ -29,3 +29,5 @@ bin/
 .DS_Store
 
 test/
+
+remote.txt
