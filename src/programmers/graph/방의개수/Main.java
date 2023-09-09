@@ -18,30 +18,33 @@ import java.util.Objects;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println(solution(new int[]{6, 6, 6, 4, 4, 4, 2, 2, 2, 0, 0, 0, 1, 6, 5, 5, 3, 6, 0}));
+        Solution solution = new Solution();
+        System.out.println(solution.solution(new int[]{6, 6, 6, 4, 4, 4, 2, 2, 2, 0, 0, 0, 1, 6, 5, 5, 3, 6, 0}));
+    }
+}
+
+class Pair {
+    public int x;
+    public int y;
+
+    public Pair(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    static class Pair {
-        public int x;
-        public int y;
-
-        public Pair(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(x, y);
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            return this.x == ((Pair) o).x && this.y == ((Pair) o).y;
-        }
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 
-    public static int solution(int[] arrows) {
+    @Override
+    public boolean equals(Object o) {
+        return this.x == ((Pair) o).x && this.y == ((Pair) o).y;
+    }
+
+}
+class Solution {
+    public int solution(int[] arrows) {
 
         // 변수 선언
         int cnt = 0;
@@ -85,7 +88,7 @@ public class Main {
     }
 
     // 밸류값에 넣기 위한 리스트 만들기
-    public static ArrayList<Pair> makeEdgeList(Pair pointHC) {
+    public ArrayList<Pair> makeEdgeList(Pair pointHC) {
         ArrayList<Pair> edge = new ArrayList<>();
         edge.add(pointHC);
         return edge;
