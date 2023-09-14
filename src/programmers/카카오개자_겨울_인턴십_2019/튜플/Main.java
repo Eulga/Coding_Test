@@ -2,8 +2,8 @@ package programmers.카카오개자_겨울_인턴십_2019.튜플;
 
 import java.util.*;
 
-// contains를 쓰니까 List로 하던 뭘로 하던 상관이 없었던 것 같음
-// Set에 add가 boolean을 뱉어 내기때문에 Set을 이용해도 되는 것 같음
+// 문자열을 다듬는법을 아는가와 문제에 대한 이해를 요구하는 것 같음
+
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -11,6 +11,9 @@ public class Main {
     }
 }
 
+
+// contains를 쓰니까 List로 하던 뭘로 하던 상관이 없었던 것 같음
+// Set에 add가 boolean을 뱉어 내기때문에 Set을 이용해도 되는 것 같음
 class Solution {
     public int[] solution(String s) {
         s = s.replace("{", "");
@@ -26,7 +29,7 @@ class Solution {
             }
         });
         for (int i = 0 ; i < answer.length; i++) {
-            answer[i] = Integer.parseInt(queue.poll());
+            answer[i] = Integer.parseInt(Objects.requireNonNull(queue.poll()));
         }
         return answer;
     }
