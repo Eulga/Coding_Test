@@ -1,4 +1,4 @@
-package programmers.카카오개자_겨울_인턴십_2019.튜플;
+package programmers.카카오개발자_겨울_인턴십_2019.튜플;
 
 import java.util.*;
 
